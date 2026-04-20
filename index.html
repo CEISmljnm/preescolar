@@ -15,16 +15,18 @@
 
 <body class="bg-gray-100 font-[Lexend]">
   <!--Header-->
-  <header class="w-full h-20 flex flex-row items-center justify-between bg-sky-200 shadow-gray-300 shadow-md">
-    <div class="w-[90%] mx-auto flex flex-row items-center justify-between">
+  <header class="w-full bg-sky-200 shadow-gray-300 shadow-md">
+    <div class="w-[90%] mx-auto flex flex-col md:flex-row items-center justify-between gap-4 py-4 md:py-4">
       <div class="flex flex-row gap-3 items-center">
-        <img src="public/insignia.jpg" alt="Insignia del preescolar" class="h-15 w-auto rounded-3xl">
+        <button onclick="window.location.href='index.html'" class="cursor-pointer">
+          <img src="public/insignia.jpg" alt="Insignia del preescolar" class="h-15 w-auto rounded-3xl">
+        </button>
 
         <h1 class="text-lg font-bold">Maestro Leonel José Núñez Mata</h1>
       </div>
       <!--Barra de navegacion-->
-      <nav class="flex flex-row items-center">
-        <ul class="flex flex-row items-center gap-6">
+      <nav class="w-full md:w-auto">
+        <ul class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-3 md:gap-6 text-center">
           <li><a href="index.html"
               class="text-gray-600 text-sm font-bold hover:text-gray-800 transition-colors duration-150">Inicio</a></li>
           <li><a href="historia.html"
@@ -41,7 +43,7 @@
       <!--Botón de contáctanos-->
       <div>
         <button
-          class="font-bold text-lg bg-blue-500 rounded-full px-4 py-2 text-white transition-colors duration-150 hover:bg-blue-600 cursor-pointer">Contáctanos</button>
+          class="font-bold text-lg bg-blue-500 rounded-full px-4 py-2 text-white transition-all duration-200 ease-out transform hover:-translate-y-1 hover:scale-105 hover:bg-blue-600 active:scale-95 shadow-sm hover:shadow-lg hover:shadow-blue-500/20 cursor-pointer">Contáctanos</button>
       </div>
     </div>
   </header>
@@ -49,11 +51,12 @@
   <main>
     <!--Sección 1. Inicio-->
     <section
-      class="w-[95%] bg-linear-to-bl from-55% from-gray-100 to-purple-500/5 mx-auto grid grid-cols-2 mt-40 pb-30">
+      class="w-[95%] bg-linear-to-bl from-55% from-gray-100 to-purple-500/5 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 mt-20 md:mt-40 pb-10 md:pb-30">
       <!--Columna del texto y botones-->
-      <article class="w-[80%] mx-auto col-span-1">
+      <article class="w-full md:w-[80%] mx-auto col-span-1">
         <!--Titulo de bienvenida-->
-        <h2 class="text-6xl font-bold mb-5">El mejor lugar para los <span class="text-blue-500 font-bold">niños</span>
+        <h2 class="text-4xl md:text-6xl font-bold mb-5">El mejor lugar para los <span
+            class="text-blue-500 font-bold">niños</span>
         </h2>
         <!--Párrafo de bienvenida-->
         <p class="text-xl text-gray-600">En el Maestro Leonel José Núñez Mata, brindamos un entorno seguro, educadoras
@@ -61,38 +64,38 @@
           cimientos de un aprendizaje genuino y duradero.</p>
         <br> <!--Salto de linea-->
         <!--Div para los botones-->
-        <div>
+        <div class="flex flex-col sm:flex-row gap-4">
           <!--Boton "sobre nosotros"-->
           <button
-            class="font-bold text-lg text-white bg-indigo-700 shadow-gray-300 shadow-md rounded-full px-6 py-4 transition-colors duration-150 hover:bg-indigo-900 cursor-pointer">
+            class="font-bold text-lg text-white bg-indigo-700 shadow-gray-300 shadow-md rounded-full px-6 py-4 transition-all duration-200 ease-out transform hover:-translate-y-1 hover:scale-105 hover:bg-indigo-900 active:scale-95 cursor-pointer">
             <a href="nosotros.html">Sobre nosotros</a>
           </button>
           <!--Boton "inscripción"-->
           <button
-            class="font-bold text-lg text-black bg-white shadow-gray-300 shadow-md rounded-full px-6 py-4 transition-colors duration-150 hover:bg-gray-300 cursor-pointer">
+            class="font-bold text-lg text-black bg-white shadow-gray-300 shadow-md rounded-full px-6 py-4 transition-all duration-200 ease-out transform hover:-translate-y-1 hover:scale-105 hover:bg-gray-300 active:scale-95 cursor-pointer">
             <a href="inscripcion.html">Inscripción</a>
           </button>
         </div>
         <!--Línea de división-->
         <hr class="my-10 text-gray-300">
         <!--Div sobre años de trabajo y cantidad de estudiantes-->
-        <div class="flex flex-row gap-8">
+        <div class="flex flex-col sm:flex-row justify-center sm:justify-start items-center sm:items-stretch gap-8">
           <!--Años de experiencia-->
-          <div class="flex flex-col gap-1">
+          <div class="flex flex-col gap-1 items-center sm:items-start">
             <span class="text-2xl text-black font-bold">50+</span>
             <span class="text-lg text-gray-500">Años de experiencia</span>
           </div>
           <!--Cantidad de estudiantes-->
-          <div class="flex flex-col gap-1">
+          <div class="flex flex-col gap-1 items-center sm:items-start">
             <span class="text-2xl text-black font-bold">120+</span>
             <span class="text-lg text-gray-500">Estudiantes</span>
           </div>
         </div>
       </article>
       <!--Foto de inicio-->
-      <article class="flex item-center justify-center col-start-2 col-end-2">
+      <article class="flex items-center justify-center">
         <img src="public/frente.jpeg" alt="Foto del frente del Maestro Leonel Núñez Mata"
-          class="border-12 border-white rounded-2xl shadow-xl shadow-gray-300">
+          class="border-12 border-white rounded-2xl shadow-xl shadow-gray-300 max-w-full h-auto">
       </article>
     </section>
     <!--Seccion 2. Mensaje de bienvenida y mision y vision-->
@@ -107,10 +110,10 @@
               d="M16.48 10.41c-.39.39-1.04.39-1.43 0l-4.47-4.46l-7.05 7.04l-.66-.63a3 3 0 0 1 0-4.24l4.24-4.24a3 3 0 0 1 4.24 0L16.48 9c.39.39.39 1.02 0 1.41m.7-2.12c.78.78.78 2.05 0 2.83c-1.27 1.27-2.61.22-2.83 0l-3.76-3.76l-5.57 5.57a.996.996 0 0 0 0 1.41c.39.39 1.02.39 1.42 0l4.62-4.62l.71.71l-4.62 4.62a.996.996 0 0 0 0 1.41c.39.39 1.02.39 1.42 0l4.62-4.62l.71.71l-4.62 4.62a.996.996 0 1 0 1.41 1.41l4.62-4.62l.71.71l-4.62 4.62a.996.996 0 1 0 1.41 1.41l8.32-8.34a3 3 0 0 0 0-4.24l-4.24-4.24a3 3 0 0 0-4.18-.06z" />
           </svg>
 
-          <h2 class="text-4xl font-bold text-gray-900">Bienvenido a nuestra familia</h2>
+          <h2 class="text-4xl font-bold text-gray-900 text-center">Bienvenido a nuestra familia</h2>
         </div>
         <!--div para el texto-->
-        <div class="max-w-280 px-8">
+        <div class="max-w-170 px-4 md:px-8">
           <p class="text-lg text-center text-gray-600">Los primeros años de tu hijo son los que más huella dejan. Por
             eso, en el Maestro Leonel José Núñez Mata, cada espacio está pensado con intención pedagógica: materiales
             que invitan a descubrir, rutinas que generan tranquilidad y educadoras que acompañan a tu hijo cada día con
@@ -118,12 +121,12 @@
         </div>
       </article>
       <!--articulo para la mision y vision-->
-      <article class="flex flex-row items-center">
+      <article class="flex flex-col items-center">
         <!--div para las dos tarjetas-->
-        <div class="w-[80%] flex flex-row items-center mx-auto gap-6">
+        <div class="w-[90%] md:w-[80%] flex flex-col md:flex-row items-center mx-auto gap-6">
           <!--div para la mision-->
           <div
-            class="p-4 rounded-2xl bg-white my-6 shadow-gray-200 shadow-md hover:scale-105 transition-transform duration-200">
+            class="w-full p-4 rounded-2xl bg-white my-6 shadow-gray-200 shadow-md hover:scale-105 transition-transform duration-200">
             <!--Icono y subtitulo-->
             <div class="flex flex-col items-start">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -147,7 +150,7 @@
           </div>
           <!--div para la vision-->
           <div
-            class="p-4 rounded-2xl bg-white my-6 shadow-gray-200 shadow-md hover:scale-105 transition-transform duration-200">
+            class="w-full p-4 rounded-2xl bg-white my-6 shadow-gray-200 shadow-md hover:scale-105 transition-transform duration-200">
             <!--Icono y subtitulo-->
             <div class="flex flex-col items-start">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -175,27 +178,27 @@
     <!--Seccion 3. razones para elegir el preescolar-->
     <section class="w-full bg-white py-15">
       <!--Artículo para el titulo y el texto-->
-      <article class="w-[80%] flex flex-col mx-auto pb-10 gap-3">
+      <article class="w-[90%] md:w-[80%] flex flex-col mx-auto pb-10 gap-3">
         <span class="text-blue-400 font-bold text-xl">¿Por qué elegirnos?</span>
         <h2 class="text-2xl font-bold">Porque ofrecemos lo mejor para tus hijos</h2>
         <!--div para el texto-->
-        <div class="w-[65%]">
+        <div class="w-full md:w-[65%]">
           <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero aperiam beatae, ipsa
             veritatis blanditiis laborum error qui, distinctio quis neque provident ullam architecto, minus quibusdam
             alias possimus molestiae nemo commodi.</p>
         </div>
       </article>
       <!--Articulo para las razones-->
-      <article class="w-[80%] mx-auto">
+      <article class="w-[90%] md:w-[80%] mx-auto">
         <!--div que contiene las tres tarjetas-->
-        <div class="flex flex-row gap-6 items-start">
+        <div class="flex flex-col md:flex-row gap-6 items-start">
           <!--Tarjeta 1-->
           <div class="flex-1">
             <div class="aspect-square mb-4">
               <img src="public/imgpueba1.jpg" alt="imagen de prueba 1" class="rounded-2xl h-full w-full object-cover">
             </div>
 
-            <div class="w-[80%]">
+            <div class="w-full">
               <h3 class="font-bold text-xl">razon 1</h3>
               <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto aspernatur quas
                 odio. Nulla omnis asperiores deleniti ex accusamus neque enim error. Animi veniam quisquam atque magni
@@ -207,7 +210,7 @@
             <div class="aspect-square mb-4">
               <img src="public/imgprueba2.jpg" alt="imagen de prueba 2" class="rounded-2xl h-full w-full object-cover">
             </div>
-            <div class="w-[80%]">
+            <div class="w-full">
               <h3 class="font-bold text-xl">razon 2</h3>
               <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque placeat commodi,
                 fugit minima labore aspernatur sequi consequatur. Esse sint aut odio tempora eveniet expedita nihil
@@ -219,7 +222,7 @@
             <div class="aspect-square mb-4">
               <img src="public/imgprueba3.jpg" alt="imagen de prueba 3" class="rounded-2xl h-full w-full object-cover">
             </div>
-            <div class="w-[80%]">
+            <div class="w-full">
               <h3 class="font-bold text-xl">razon 3</h3>
               <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque placeat commodi,
                 fugit minima labore aspernatur sequi consequatur. Esse sint aut odio tempora eveniet expedita nihil
@@ -231,7 +234,7 @@
     </section>
     <!--Sección 4. Contáctanos-->
     <section>
-      <article class="py-15 w-[80%] mx-auto">
+      <article class="py-15 w-[90%] md:w-[80%] mx-auto">
         <div
           class="bg-linear-to-br from-55% from-indigo-600 to-indigo-600 rounded-2xl p-10 shadow-gray-300 shadow-xl flex flex-col items-center gap-8">
           <div class="flex flex-col items-center gap-5">
@@ -242,13 +245,13 @@
               facilis quisquam esse voluptates, quia libero exercitationem.</p>
           </div>
 
-          <div class="flex flex-row items-center gap-5">
+          <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-5">
             <button
-              class="text-white font-bold border-white border-2 p-3 rounded-3xl hover:bg-white hover:text-indigo-600 transition-colors duration-150 cursor-pointer">
+              class="text-white font-bold border-white border-2 p-3 rounded-3xl transition-all duration-200 ease-out transform hover:-translate-y-1 hover:scale-105 hover:bg-white hover:text-indigo-600 active:scale-95 cursor-pointer">
               <a href="inscripcion.html">Para inscripciones</a>
             </button>
             <button
-              class="text-white font-bold border-white border-2 p-3 rounded-3xl hover:bg-white hover:text-indigo-600 transition-colors duration-150 cursor-pointer">
+              class="text-white font-bold border-white border-2 p-3 rounded-3xl transition-all duration-200 ease-out transform hover:-translate-y-1 hover:scale-105 hover:bg-white hover:text-indigo-600 active:scale-95 cursor-pointer">
               Nuestro Facebook
             </button>
           </div>
@@ -259,7 +262,7 @@
   <!--Footer-->
   <footer class="bg-sky-950 w-full py-15 flex flex-col items-center gap-10">
     <!--Div para la información y links del footer-->
-    <div class="flex flex-row w-[90%] mx-auto items-start gap-5">
+    <div class="flex flex-col md:flex-row w-[90%] mx-auto items-start gap-8 md:gap-5">
       <!--Div para eslogan-->
       <div class="flex flex-col gap-3">
         <!--Div para el logo y el titulo-->
