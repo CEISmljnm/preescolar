@@ -15,16 +15,19 @@
 
 <body class="bg-gray-100 font-[Lexend]">
     <!--Header-->
-    <header class="w-full h-20 flex flex-row items-center justify-between bg-sky-200 shadow-gray-300 shadow-md">
-        <div class="w-[90%] mx-auto flex flex-row items-center justify-between">
+    <header class="w-full bg-sky-200 shadow-gray-300 shadow-md">
+        <div class="w-[90%] mx-auto flex flex-col md:flex-row items-center justify-between gap-5 py-4 md:py-4">
             <div class="flex flex-row items-center gap-3">
-                <img src="public/insignia.jpg" alt="Insignia del preescolar" class="h-15 w-auto rounded-3xl">
+                <button onclick="window.location.href='index.html'" class="cursor-pointer">
+                    <img src="public/insignia.jpg" alt="Insignia del preescolar" class="h-15 w-auto rounded-3xl">
+                </button>
 
                 <h1 class="text-lg font-bold">Maestro Leonel José Núñez Mata</h1>
             </div>
             <!--Barra de navegacion-->
-            <nav>
-                <ul class="flex flex-row items-center gap-6">
+            <nav class="w-full md:w-auto">
+                <ul
+                    class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-3 md:gap-6 text-center">
                     <li><a href="index.html"
                             class="text-gray-600 text-sm font-bold hover:text-gray-800 transition-colors duration-150">Inicio</a>
                     </li>
@@ -40,12 +43,15 @@
                             class="text-gray-600 text-sm font-bold hover:text-gray-800 transition-colors duration-150">Requisitos
                             de inscripción</a>
                     </li>
+                    <li><a href="nosotros.html"
+                            class="text-gray-600 text-sm font-bold hover:text-gray-800 transition-colors duration-150">Nosotros</a>
+                    </li>
                 </ul>
             </nav>
             <!--Botón de contáctanos-->
             <div>
                 <button
-                    class="font-bold text-lg bg-blue-500 rounded-full px-4 py-2 text-white transition-colors duration-150 hover:bg-blue-600 cursor-pointer">Contáctanos</button>
+                    class="font-bold text-lg bg-blue-500 rounded-full px-4 py-2 text-white transition-all duration-200 ease-out transform hover:-translate-y-1 hover:scale-105 hover:bg-blue-600 active:scale-95 shadow-sm hover:shadow-lg hover:shadow-blue-500/20 cursor-pointer">Contáctanos</button>
             </div>
         </div>
     </header>
@@ -70,8 +76,9 @@
         </section>
         <!--Sección 2. Biografía del maestro-->
         <section class="w-full bg-white py-25">
-            <div class="w-[80%] mx-auto grid grid-cols-2 ">
-                <article class="flex item-center justify-center col-start-1 col-end-1">
+            <div class="w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2">
+                <!-- En PC: col-start-1, en móvil: arriba -->
+                <article class="flex items-center justify-center md:col-start-1 md:col-end-1">
                     <div class="relative inline-block overflow-visible hover:scale-110 transition-transform group">
                         <img src="public/retrato.jpeg" alt="Retrato del maestro Leonel José Núñez Mata"
                             class="rounded-4xl w-110 h-auto shadow-2xl">
@@ -85,7 +92,8 @@
                     </div>
                 </article>
 
-                <article class="col-start-2 col-end-2">
+                <!-- En PC: col-start-2, en móvil: abajo -->
+                <article class="md:col-start-2 md:col-end-2 mt-8 md:mt-0">
                     <div class="flex flex-col items-start justify-center gap-5">
                         <h3 class="text-blue-500 font-bold text-sm uppercase">Un ejemplo de amor</h3>
 
@@ -124,203 +132,238 @@
             </div>
         </section>
         <!--Sección 3. linea de tiempo-->
-        <section class="w-[80%] mx-auto py-20">
-            <h2 class="font-bold text-center text-3xl mb-20">El Comienzo de una Gran Historia</h2>
+        <section class="w-[90%] md:w-[80%] mx-auto py-12 md:py-20">
+            <h2 class="font-bold text-center text-2xl md:text-3xl mb-10 md:mb-20">El Comienzo de una Gran Historia</h2>
+
             <!--Div principal para la linea de tiempo-->
             <div class="relative">
-                <!--Linea vertical-->
-                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-indigo-700"></div>
-                <!--Articulo. 1976-->
-                <article class="relative mb-16">
-                    <!--div con dos mitades-->
-                    <div class="flex flex-row items-center">
-                        <!--texto a la izquierda-->
-                        <div class="w-1/2 pr-15 text-right flex flex-col gap-3 items-end">
+                <!-- Linea vertical (solo se ve en PC) -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-indigo-700">
+                </div>
+
+                <!-- Linea horizontal decorativa en móvil (opcional) -->
+                <div class="md:hidden w-full h-1 bg-indigo-700 mb-12"></div>
+
+                <!-- Articulo 1: 1976 -->
+                <article class="relative mb-12 md:mb-16">
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <!-- Texto -->
+                        <div
+                            class="w-full md:w-1/2 md:pr-15 text-center md:text-right flex flex-col gap-3 items-center md:items-end order-2 md:order-1">
                             <span class="bg-blue-700/30 p-2 rounded-3xl text-blue-700 font-semibold">1976</span>
                             <h3 class="text-lg font-bold">El Nacer de un Sueño</h3>
-                            <p class="text-gray-600">El 4 de octubre se fundó el Centro Preescolar Bebedero con 5
+                            <p class="text-gray-600 text-sm sm:text-base">El 4 de octubre se fundó el Centro Preescolar
+                                Bebedero con 5
                                 edificaciones (2 pequeñas y 3 grandes, incluyendo la institución actual). Ubicadas en
                                 distintos sectores de la comunidad, operaban en 2 turnos de 5 horas diarias. Fue
                                 dirigido por la profesora Hilda Córdova, con maestras fundadoras como Hilda Rodríguez,
                                 Rosa de Cova, Iraida Marcano, Noris Vargas y Rosa de Rivas, entre otras.</p>
                         </div>
-                        <!--punto en la linea-->
+
+                        <!-- Punto en la linea (solo PC) -->
                         <div
-                            class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white rounded-full border-4 border-indigo-700 z-10">
+                            class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white rounded-full border-4 border-indigo-700 z-10">
                         </div>
-                        <!--imagen a la derecha-->
-                        <div class="w-1/2 pl-15">
+
+                        <!-- Imagen -->
+                        <div class="w-full md:w-1/2 md:pl-15 order-1 md:order-2 mb-6 md:mb-0">
                             <img src="public/techo.jpg" alt="Construcción del techo del preescolar"
-                                class="w-full h-auto rounded-3xl object-cover">
+                                class="w-full h-auto rounded-3xl object-cover shadow-md">
                         </div>
                     </div>
+                    <!-- Indicador de año móvil -->
+                    <div class="md:hidden flex justify-center mt-4">
+                        <div class="w-3 h-3 bg-indigo-700 rounded-full"></div>
+                    </div>
                 </article>
-                <!--Articulo. 2001-2002-->
-                <article class="relative mb-16">
-                    <!--div con dos mitades-->
-                    <div class="flex flex-row items-center">
-                        <!--imagen a la izquierda-->
-                        <div class="w-1/2 pr-15">
+
+                <!-- Articulo 2: 2001-2002 -->
+                <article class="relative mb-12 md:mb-16">
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <!-- Imagen -->
+                        <div class="w-full md:w-1/2 md:pr-15 order-1 mb-6 md:mb-0">
                             <img src="public/comparsa.jpeg" alt="Comparsa realizada por el preescolar"
-                                class="w-full h-auto rounded-3xl object-cover">
+                                class="w-full h-auto rounded-3xl object-cover shadow-md">
                         </div>
-                        <!--punto en la linea-->
+
+                        <!-- Punto en la linea (solo PC) -->
                         <div
-                            class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white rounded-full border-4 border-indigo-700 z-10">
+                            class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white rounded-full border-4 border-indigo-700 z-10">
                         </div>
-                        <!--texto a la derecha-->
-                        <div class="w-1/2 pl-15 flex flex-col gap-3 items-start text-left">
+
+                        <!-- Texto -->
+                        <div
+                            class="w-full md:w-1/2 md:pl-15 text-center md:text-left flex flex-col gap-3 items-center md:items-start order-2">
                             <span
                                 class="bg-emerald-700/30 p-2 rounded-3xl text-emerald-700 font-semibold">2001-2002</span>
                             <h3 class="text-lg font-bold">Sueño en Expansión</h3>
-                            <p class="text-gray-600">Los centros preescolares se integran al Proyecto Educativo Bandera
+                            <p class="text-gray-600 text-sm sm:text-base">Los centros preescolares se integran al
+                                Proyecto Educativo Bandera
                                 de Hugo Chávez, convirtiéndose en Centros Preescolares Bolivarianos con atención
                                 integral de 8 horas (7:30 am - 3:30 pm). Dirigidos por coordinadores: Iraida Marcano
                                 (Bebedero I), Ana Rodríguez (Bebedero II) e Iris Patiño (Bebedero III).</p>
                         </div>
                     </div>
+                    <div class="md:hidden flex justify-center mt-4">
+                        <div class="w-3 h-3 bg-indigo-700 rounded-full"></div>
+                    </div>
                 </article>
-                <!--Articulo. 2007-->
-                <article class="relative mb-16">
-                    <!--div con dos mitades-->
-                    <div class="flex flex-row items-center">
-                        <!--texto a la izquierda-->
-                        <div class="w-1/2 pr-15 text-right flex flex-col gap-3 items-end">
+
+                <!-- Articulo 3: 2007 -->
+                <article class="relative mb-12 md:mb-16">
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <!-- Texto -->
+                        <div
+                            class="w-full md:w-1/2 md:pr-15 text-center md:text-right flex flex-col gap-3 items-center md:items-end order-2 md:order-1">
                             <span class="bg-yellow-600/30 p-2 rounded-3xl text-yellow-600 font-semibold">2007</span>
                             <h3 class="text-lg font-bold">Mejorando Cada Día</h3>
-                            <p class="text-gray-600">El Centro Preescolar Bolivariano “Bebedero II” se convierte en
-                                Centro de Educación Inicial Simoncito “Bebedero II” (por lineamientos del M.P.P.E.).
+                            <p class="text-gray-600 text-sm sm:text-base">El Centro Preescolar Bolivariano "Bebedero II"
+                                se convierte en
+                                Centro de Educación Inicial Simoncito "Bebedero II" (por lineamientos del M.P.P.E.).
                                 Cuenta con 1 aula maternal (16 niños de 2 años aprox.) y 7 aulas preescolares (niños de
                                 3-5 años). Además, se fortaleció con el Programa Alimentario (PAGB), garantizando
                                 desayuno, almuerzo y merienda para los pequeños.</p>
                         </div>
-                        <!--punto en la linea-->
+
                         <div
-                            class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white rounded-full border-4 border-indigo-700 z-10">
+                            class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white rounded-full border-4 border-indigo-700 z-10">
                         </div>
-                        <!--imagen a la derecha-->
-                        <div class="w-1/2 pl-15">
+
+                        <div class="w-full md:w-1/2 md:pl-15 order-1 md:order-2 mb-6 md:mb-0">
                             <img src="public/jardin.jpg" alt="Jardín del preescolar"
-                                class="w-full h-auto rounded-3xl object-cover">
+                                class="w-full h-auto rounded-3xl object-cover shadow-md">
                         </div>
                     </div>
+                    <div class="md:hidden flex justify-center mt-4">
+                        <div class="w-3 h-3 bg-indigo-700 rounded-full"></div>
+                    </div>
                 </article>
-                <!--Articulo. 2019-->
-                <article class="relative mb-16">
-                    <!--div con dos mitades-->
-                    <div class="flex flex-row items-center">
-                        <!--imagen a la izquierda-->
-                        <div class="w-1/2 pr-15">
+
+                <!-- Articulo 4: 2019 -->
+                <article class="relative mb-12 md:mb-16">
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="w-full md:w-1/2 md:pr-15 order-1 mb-6 md:mb-0">
                             <img src="public/insignia.jpg" alt="Insignia del preescolar"
-                                class="w-full h-auto rounded-3xl object-cover">
+                                class="w-full h-auto rounded-3xl object-cover shadow-md">
                         </div>
-                        <!--punto en la linea-->
+
                         <div
-                            class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white rounded-full border-4 border-indigo-700 z-10">
+                            class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white rounded-full border-4 border-indigo-700 z-10">
                         </div>
-                        <!--texto a la derecha-->
-                        <div class="w-1/2 pl-15 flex flex-col gap-3 items-start text-left">
+
+                        <div
+                            class="w-full md:w-1/2 md:pl-15 text-center md:text-left flex flex-col gap-3 items-center md:items-start order-2">
                             <span class="bg-red-700/30 p-2 rounded-3xl text-red-700 font-semibold">2019</span>
                             <h3 class="text-lg font-bold">Nuestra Identidad</h3>
-                            <p class="text-gray-600">El plantel cambia su nombre a CEIS “Maestro Leonel José Nuñez
-                                Mata”, reafirmando su identidad y compromiso con la educación inicial y manteniendo
+                            <p class="text-gray-600 text-sm sm:text-base">El plantel cambia su nombre a CEIS "Maestro
+                                Leonel José Nuñez
+                                Mata", reafirmando su identidad y compromiso con la educación inicial y manteniendo
                                 atención de calidad a su matrícula estudiantil por 18 años.</p>
                         </div>
                     </div>
+                    <div class="md:hidden flex justify-center mt-4">
+                        <div class="w-3 h-3 bg-indigo-700 rounded-full"></div>
+                    </div>
                 </article>
-                <!--Articulo. Actualidad-->
-                <article class="relative mb-16">
-                    <!--div con dos mitades-->
-                    <div class="flex flex-row items-center">
-                        <!--texto a la izquierda-->
-                        <div class="w-1/2 pr-15 text-right flex flex-col gap-3 items-end">
+
+                <!-- Articulo 5: Actualidad -->
+                <article class="relative mb-12 md:mb-16">
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div
+                            class="w-full md:w-1/2 md:pr-15 text-center md:text-right flex flex-col gap-3 items-center md:items-end order-2 md:order-1">
                             <span class="bg-pink-700/30 p-2 rounded-3xl text-pink-700 font-semibold">Actualidad</span>
                             <h3 class="text-lg font-bold">Seguimos Contigo</h3>
-                            <p class="text-gray-600">Hoy, bajo la dirección de la MSc. Eudys Ponce y la subdirección de
+                            <p class="text-gray-600 text-sm sm:text-base">Hoy, bajo la dirección de la MSc. Eudys Ponce
+                                y la subdirección de
                                 la Lcda. Ysaura López, quienes optimizan la gestión administrativa y pedagógica, el
                                 centro continúa creciendo. Con 17 docentes de aula, personal administrativo, cultural y
                                 de salud, además de un equipo de obreros, vigilantes y madres procesadoras, la
                                 institución se mantiene como un verdadero pilar comunitario, y ha logrado formar poco
                                 más de 4 generaciones durante sus 50 años de servicio.</p>
                         </div>
-                        <!--punto en la linea-->
+
                         <div
-                            class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white rounded-full border-4 border-indigo-700 z-10">
+                            class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white rounded-full border-4 border-indigo-700 z-10">
                         </div>
-                        <!--imagen a la derecha-->
-                        <div class="w-1/2 pl-15">
+
+                        <div class="w-full md:w-1/2 md:pl-15 order-1 md:order-2 mb-6 md:mb-0">
                             <img src="public/gobernadora.jpeg"
                                 alt="Fotografía de la gobernadora, Jhoana Carrillo, visitando el preescolar"
-                                class="w-full h-auto rounded-3xl object-cover">
+                                class="w-full h-auto rounded-3xl object-cover shadow-md">
                         </div>
+                    </div>
+                    <div class="md:hidden flex justify-center mt-4">
+                        <div class="w-3 h-3 bg-indigo-700 rounded-full"></div>
                     </div>
                 </article>
             </div>
         </section>
         <!--Sección 4. invitacion a galeria-->
         <section class="w-full mx-auto items-center bg-sky-100">
-            <article class="w-[80%] flex flex-col gap-10 items-center mx-auto py-10">
-                <div class="flex flex-col gap-5 text-center">
-                    <h2 class="font-bold text-3xl">Una Muestra de Nuestro Compromiso</h2>
-                    <span class="text-sky-600 font-semibold">Visita nuestra galería, donde recopilamos los frutos de
+            <article class="w-[90%] md:w-[80%] flex flex-col gap-6 md:gap-10 items-center mx-auto py-8 md:py-10">
+                <div class="flex flex-col gap-3 md:gap-5 text-center">
+                    <h2 class="font-bold text-2xl md:text-3xl">Una Muestra de Nuestro Compromiso</h2>
+                    <span class="text-sky-600 font-semibold text-sm md:text-base">Visita nuestra galería, donde
+                        recopilamos los frutos de
                         nuestro esfuerzo en garantizarle lo mejor a tus hijos</span>
                 </div>
 
-                <div class="grid grid-cols-4 grid-rows-2 gap-4">
-                    <div class="col-span-2 row-span-2">
+                <!-- Grid responsive: en PC se mantiene igual, en móvil cambia a 2 columnas -->
+                <div class="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-3 md:gap-4 w-full">
+                    <!-- Imagen grande (ocupa 2 columnas y 2 filas en PC, en móvil ocupa todo el ancho) -->
+                    <div class="col-span-2 md:col-span-2 md:row-span-2">
                         <img src="public/gal1.jpeg"
-                            alt="Fotografía del reto de ciencias en el que partició la institución, con dos maestras en la toma y tres niños"
-                            class="aspect-square object-cover rounded-3xl">
+                            alt="Fotografía del reto de ciencias en el que participó la institución, con dos maestras en la toma y tres niños"
+                            class="w-full h-full aspect-square object-cover rounded-2xl md:rounded-3xl">
                     </div>
-                    <div class="col-span-1 row-span-1">
+
+                    <!-- Imagen 2 -->
+                    <div class="col-span-1 md:col-span-1">
                         <img src="public/gal13.jpeg"
-                            alt="Fotografía del reto de ciencias en el que partició la institución, con cinco niñas en la toma"
-                            class="aspect-square object-cover rounded-3xl">
+                            alt="Fotografía del reto de ciencias en el que participó la institución, con cinco niñas en la toma"
+                            class="w-full aspect-square object-cover rounded-2xl md:rounded-3xl">
                     </div>
-                    <div class="col-span-1 row-span-1">
+
+                    <!-- Imagen 3 -->
+                    <div class="col-span-1 md:col-span-1">
                         <img src="public/navidad3.jpeg"
                             alt="Fotografía de exposición navideña con actividades realizadas por los estudiantes"
-                            class="aspect-square object-cover rounded-3xl">
+                            class="w-full aspect-square object-cover rounded-2xl md:rounded-3xl">
                     </div>
-                    <div class="col-span-1 row-span-1">
+
+                    <!-- Imagen 4 -->
+                    <div class="col-span-1 md:col-span-1">
                         <img src="public/navidad2.jpeg"
                             alt="Fotografía de exposición navideña con actividades realizadas por los estudiantes"
-                            class="aspect-square object-cover rounded-3xl">
+                            class="w-full aspect-square object-cover rounded-2xl md:rounded-3xl">
                     </div>
+
+                    <!-- Cuadro "¡Mucho Más!" - se comporta igual en PC y móvil -->
                     <div
-                        class="col-span-1 row-span-1 bg-sky-400/30 rounded-3xl flex flex-col items-center justify-center">
-                        <a href="galeria.html">
+                        class="col-span-1 md:col-span-1 bg-sky-400/30 rounded-2xl md:rounded-3xl flex flex-col items-center justify-center p-4">
+                        <a href="galeria.html" class="flex flex-col items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="size-10 text-sky-500 mx-auto">
+                                class="size-8 md:size-10 text-sky-500">
                                 <path fill-rule="evenodd"
                                     d="M1.5 6a2.25 2.25 0 0 1 2.25-2.25h16.5A2.25 2.25 0 0 1 22.5 6v12a2.25 2.25 0 0 1-2.25 2.25H3.75A2.25 2.25 0 0 1 1.5 18V6ZM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0 0 21 18v-1.94l-2.69-2.689a1.5 1.5 0 0 0-2.12 0l-.88.879.97.97a.75.75 0 1 1-1.06 1.06l-5.16-5.159a1.5 1.5 0 0 0-2.12 0L3 16.061Zm10.125-7.81a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Z"
                                     clip-rule="evenodd" />
                             </svg>
-
-                            <span class="text-sky-600 font-semibold">¡Mucho Más!</span>
+                            <span class="text-sky-600 font-semibold text-sm md:text-base">¡Mucho Más!</span>
                         </a>
                     </div>
                 </div>
             </article>
         </section>
     </main>
-
+    <!--Footer-->
     <footer class="bg-sky-950 w-full py-15 flex flex-col items-center gap-10">
         <!--Div para la información y links del footer-->
-        <div class="flex flex-row w-[90%] mx-auto items-start gap-5">
+        <div class="flex flex-col md:flex-row w-[90%] mx-auto items-start gap-8 md:gap-5">
             <!--Div para eslogan-->
             <div class="flex flex-col gap-3">
                 <!--Div para el logo y el titulo-->
                 <div class="flex flex-row gap-3 items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-12 bg-blue-300 p-2 rounded-full">
-                        <path
-                            d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z" />
-                        <path
-                            d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z" />
-                        <path
-                            d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" />
-                    </svg>
+                    <img src="public/insignia.jpg" alt="Insignia del preescolar" class="h-15 w-auto rounded-3xl">
 
                     <h2 class="text-white text-lg font-bold">Maestro Leonel José Núñez Mata</h2>
                 </div>
