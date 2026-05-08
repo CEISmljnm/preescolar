@@ -1,4 +1,3 @@
-import { resolve } from 'path';
 import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 
@@ -9,12 +8,12 @@ export default defineConfig({
     build: {
         rollupOptions: {
             input: {
-                main: resolve(__dirname, 'index.html'),
-                historia: resolve(__dirname, 'pages/historia.html'),
-                galeria: resolve(__dirname, 'pages/galeria.html'),
-                inscripcion: resolve(__dirname, 'pages/inscripcion.html'),
-                nosotros: resolve(__dirname, 'pages/nosotros.html'),
+                main: 'index.html',
+                historia: 'src/pages/historia.html',
+                galeria: 'src/pages/galeria.html',
+                inscripcion: 'src/pages/inscripcion.html',
+                nosotros: 'src/pages/nosotros.html',
             },
         },
     },
-})
+});
