@@ -17,9 +17,9 @@
     <!--Header-->
     <header class="w-full bg-sky-200 shadow-gray-300 shadow-md">
         <div class="w-[90%] mx-auto flex flex-col md:flex-row items-center justify-between gap-5 py-4 md:py-4">
-            <div class="flex flex-row gap-3 items-center">
+            <div class="flex flex-row items-center gap-3">
                 <button onclick="window.location.href='index.html'" class="cursor-pointer">
-                    <img src="public/insignia.jpg" alt="Insignia del preescolar" class="h-15 w-auto rounded-3xl">
+                    <img src="/assets/insignia.jpg" alt="Insignia del preescolar" class="h-15 w-auto rounded-3xl">
                 </button>
 
                 <h1 class="text-lg font-bold">Maestro Leonel José Núñez Mata</h1>
@@ -28,18 +28,21 @@
             <nav class="w-full md:w-auto">
                 <ul
                     class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-3 md:gap-6 text-center">
-                    <li><a href="index.html"
+                    <li><a href="/index.html"
                             class="text-gray-600 text-sm font-bold hover:text-gray-800 transition-colors duration-150">Inicio</a>
                     </li>
                     <li><a href="historia.html"
                             class="text-gray-600 text-sm font-bold hover:text-gray-800 transition-colors duration-150">Reseña
-                            histórica</a></li>
+                            histórica</a>
+                    </li>
                     <li><a href="galeria.html"
                             class="text-gray-600 text-sm font-bold hover:text-gray-800 transition-colors duration-150">Galería
-                            de fotos</a></li>
+                            de fotos</a>
+                    </li>
                     <li><a href="inscripcion.html"
                             class="text-gray-600 text-sm font-bold hover:text-gray-800 transition-colors duration-150">Requisitos
-                            de inscripción</a></li>
+                            de inscripción</a>
+                    </li>
                     <li><a href="nosotros.html"
                             class="text-gray-600 text-sm font-bold hover:text-gray-800 transition-colors duration-150">Nosotros</a>
                     </li>
@@ -54,99 +57,147 @@
     </header>
     <!--Main-->
     <main>
-        <!--Seccion 1. Titulo principal y texto-->
+        <!--Seccion 1. Titulo principal y botones-->
         <section class="w-[95%] bg-linear-to-bl from-55% from-gray-100 to-purple-500/5 mx-auto mt-40 pb-40">
             <article class="w-[80%] flex flex-col items-center mx-auto gap-5 text-center">
                 <div class="flex flex-col items-center mx-auto gap-3">
-                    <span class="bg-indigo-700/30 p-2 rounded-3xl text-indigo-600 font-bold text-sm">Te esperamos</span>
+                    <span class="bg-indigo-700/30 p-2 rounded-3xl text-indigo-600 font-bold text-sm">Vida Escolar</span>
                     <h2 class="font-bold text-6xl mb-3">
-                        Únete a Nuestra <span class="text-blue-500 font-bold">Familia</span>
+                        <span class="text-blue-500 font-bold">Fotografiando</span> Alegría y
+                        Aprendizaje
                     </h2>
-                    <p class="text-gray-600 text-xl"> Te garantizamos un ambiente seguro, educativo y lleno de amor para
-                        el desarrollo integral de tu hijo.
-                    </p>
+                    <p class="text-gray-600 text-xl">Descubre las mejores momentos de nuestra comunidad educativa a
+                        través de las fotos almacenadas en
+                        nuestra galería.</p>
                 </div>
+
+                <nav>
+                    <ol class="flex flex-row gap-5">
+                        <li>
+                            <button
+                                class="border-blue-400 border-2 text-blue-400 p-2 rounded-4xl hover:bg-blue-400 hover:text-white transition-colors duration-150 cursor-pointer">
+                                <a href="#2026">2026</a>
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="border-blue-400 border-2 text-blue-400 p-2 rounded-4xl hover:bg-blue-400 hover:text-white transition-colors duration-150 cursor-pointer">
+                                <a href="#2025">2025</a>
+                            </button>
+                        </li>
+                    </ol>
+                </nav>
             </article>
         </section>
-        <!--Seccion 2. Requisitos de inscripción-->
-        <section class="w-full bg-white py-15">
-            <article class="w-[80%] mx-auto flex flex-col gap-3 items-center">
-                <h2 class="font-bold text-3xl">¿Deseas inscribir a tu hijo en nuestro preescolar?</h2>
+        <!--Seccion 2. Fotos-->
+        <section class="w-[90%] mx-auto py-15">
+            <!--2026-->
+            <article>
+                <div>
+                    <span id="2026" class="text-lg font-bold text-blue-500">2026</span>
+                    <br>
+                    <hr class="mt-3 mb-10 text-blue-500 border-t-2">
+                </div>
+                <div class="grid grid-cols-3 auto-rows-auto gap-4 mb-15">
+                    <img src="/assets/gal16.jpeg" alt="Anuncio de Reto de ciencias" class="row-span-2 rounded-3xl">
 
-                <p class="text-gray-600 text-lg pb-3">Comunícate con nosotros a través de las vías indicadas y asiste a
-                    la institución con los siguientes requisitos:</p>
+                    <img src="/assets/gal15.jpeg" alt="Foto completa de las exposiciones del reto de ciencias"
+                        class="col-span-2 h-90 w-auto object-cover rounded-3xl">
 
-                <img src="public/requisitos.jpg" alt="Requisitos de inscripción" class="w-80 h-auto rounded-lg">
+                    <img src="/assets/gal7.jpeg" alt="" class="rounded-3xl">
+
+                    <img src="/assets/gal3.jpeg"
+                        alt="Fotos de niños participando en el reto de ciencias, hablando sobre la tapara"
+                        class="object-cover rounded-3xl">
+
+                    <img src="/assets/gal1.jpeg"
+                        alt="Fotografía del reto de ciencias en el que partició la institución, con dos maestras en la toma y tres niños"
+                        class="aspect-square object-cover rounded-3xl">
+
+                    <img src="/assets/gal4.jpeg"
+                        alt="Foto de nniño hablando por el micrófono y la directora, Eudys Ponce, detrás de él"
+                        class="aspect-square object-cover rounded-3xl">
+
+                    <img src="/assets/gal6.jpeg" alt="Niñas participando en el reto de ciencias"
+                        class="aspect-square object-cover rounded-3xl">
+
+                    <img src="/assets/gal8.jpeg"
+                        alt="Niña disfrazada de científica y exponiendo para el reto de ciencias"
+                        class="aspect-square object-cover rounded-3xl">
+
+                    <img src="/assets/gal13.jpeg" alt="Foto de cinco niñas disfrazadas de científicas"
+                        class="aspect-square object-cover rounded-3xl">
+
+                    <img src="/assets/gal14.jpeg" alt="Niñas exponiendo en el reto de ciencias"
+                        class="aspect-square object-cover rounded-3xl">
+
+                    <img src="/assets/gal11.jpeg" alt="Niño exponiendo en el reto de ciencias"
+                        class="aspect-square object-cover rounded-3xl">
+
+                    <img src="/assets/gal5.jpeg" alt="Niño disfrazado de científico exponiendo en el reto de ciencias"
+                        class="aspect-square object-cover rounded-3xl">
+
+                    <img src="/assets/gal10.jpeg" alt="Foto de niños en el reto de ciencias"
+                        class="aspect-square object-cover rounded-3xl">
+
+                    <img src="/assets/gal12.jpeg" alt="Niña disfrazada de científica exponiendo en el reto de ciencias"
+                        class="aspect-square object-cover rounded-3xl">
+
+                    <img src="/assets/gal9.jpeg" alt="Niño exponiendo en el reto de ciencias"
+                        class="aspect-square object-cover rounded-3xl">
+
+                    <img src="/assets/gal2.jpeg" alt="Foto del reto de ciencias con niños, maestras y representantes"
+                        class="aspect-square object-cover rounded-3xl">
+
+                    <img src="/assets/entecho.jpeg"
+                        alt="Foto del día en el que la gobernadora, Jhoana Carrillo, visitó el preescolar, con personas en el techo esperando su llegada"
+                        class="col-span-3 rounded-3xl">
+                </div>
+
             </article>
-        </section>
-        <!--Seccion 3. Preguntas frecuentes-->
-        <section class="w-[80%] mx-auto py-15 flex flex-col items-center">
-            <h2 class="font-bold text-3xl mb-10">Preguntas Frecuentes</h2>
-            <!--Desplegable 1-->
-            <details class="bg-sky-500 rounded-lg shadow-md mb-3 w-105">
-                <!--El encabezado que siempre se ve-->
-                <summary
-                    class="px-6 py-4 font-bold text-white cursor-pointer list-none flex justify-between items-center">
-                    <span class="pr-3">"¿Solo brindan servicios de preescolar?"</span>
-
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
-                        </svg>
-
-                    </div>
-                </summary>
-                <!--Contenido dentro del desplegable-->
-                <div class="px-6 pb-4 text-sky-800 font-semibold">
-                    <p>¡No! Además de los 3 niveles de preescolar, contamos con Maternal y Atención No Convencional
-                        (Espacio, Familia y Comunidad).</p>
+            <!--2025-->
+            <article>
+                <div>
+                    <span id="2025" class="text-lg font-bold text-blue-500">2025</span>
+                    <br>
+                    <hr class="mt-3 mb-10 text-blue-500 border-t-2">
                 </div>
-            </details>
-            <!--Desplegable 2-->
-            <details class="bg-sky-500 rounded-lg shadow-md w-105 mb-3">
-                <!--El encabezado que siempre se ve-->
-                <summary
-                    class="px-6 py-4 font-bold text-white cursor-pointer list-none flex justify-between items-center">
-                    <span class="pr-3">"¿Qué edades atienden?"</span>
 
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
-                        </svg>
+                <div class="grid grid-cols-3 auto-rows-auto gap-4 mb-15">
+                    <img src="/assets/navidad1.jpeg"
+                        alt="Foto de una exposición de actividades navideñas hecha por los alumnos"
+                        class="row-span-2 rounded-3xl">
 
-                    </div>
-                </summary>
-                <!--Contenido dentro del desplegable-->
-                <div class="px-6 pb-4 text-sky-800 font-semibold">
-                    <p>En Espacio, Familia y Comunidad atendemos a tus hijos desde recién nacidos. En maternal aceptamos
-                        niños de 2 años mínimo y de 3 años mínimo para preescolar.</p>
+                    <img src="/assets/navidad10.jpeg" alt="Foto de pancarta navideña" class="rounded-3xl">
+
+                    <img src="/assets/navidad2.jpeg"
+                        alt="Foto de una exposición de actividades navideñas hecha por los alumnos" class="rounded-3xl">
+
+                    <img src="/assets/navidad3.jpeg"
+                        alt="Foto de una exposición de actividades navideñas hecha por los alumnos" class="rounded-3xl">
+
+                    <img src="/assets/navidad4.jpeg"
+                        alt="Foto de una exposición de actividades navideñas hecha por los alumnos" class="rounded-3xl">
+
+                    <img src="/assets/navidad5.jpeg"
+                        alt="Foto de una exposición de actividades navideñas hecha por los alumnos" class="rounded-3xl">
+
+                    <img src="/assets/navidad6.jpeg"
+                        alt="Foto de una exposición de actividades navideñas hecha por los alumnos" class="rounded-3xl">
+
+                    <img src="/assets/navidad7.jpeg"
+                        alt="Foto de una exposición de actividades navideñas hecha por los alumnos" class="rounded-3xl">
+
+                    <img src="/assets/navidad8.jpeg"
+                        alt="Foto de una exposición de actividades navideñas hecha por los alumnos" class="rounded-3xl">
+
+                    <img src="/assets/navidad9.jpeg"
+                        alt="Foto de una exposición de actividades navideñas hecha por los alumnos" class="rounded-3xl">
+
+                    <img src="/assets/navidad11.jpeg"
+                        alt="Foto de una exposición de actividades navideñas hecha por los alumnos" class="rounded-3xl">
                 </div>
-            </details>
-            <!--Desplegable 3-->
-            <details class="bg-sky-500 rounded-lg shadow-md w-105 mb-3">
-                <!--El encabezado que siempre se ve-->
-                <summary
-                    class="px-6 py-4 font-bold text-white cursor-pointer list-none flex justify-between items-center">
-                    <span class="pr-3">"¿Hay turnos de tarde?"</span>
-
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5" />
-                        </svg>
-
-                    </div>
-                </summary>
-                <!--Contenido dentro del desplegable-->
-                <div class="px-6 pb-4 text-sky-800 font-semibold">
-                    <p>¡Tristemente no! Contamos solamente con un horario de 7:30AM a 12:00PM.</p>
-                </div>
-            </details>
+            </article>
         </section>
     </main>
     <!--Footer-->
@@ -157,7 +208,7 @@
             <div class="flex flex-col gap-3">
                 <!--Div para el logo y el titulo-->
                 <div class="flex flex-row gap-3 items-center">
-                    <img src="public/insignia.jpg" alt="Insignia del preescolar" class="h-15 w-auto rounded-3xl">
+                    <img src="/assets/insignia.jpg" alt="Insignia del preescolar" class="h-15 w-auto rounded-3xl">
 
                     <h2 class="text-white text-lg font-bold">Maestro Leonel José Núñez Mata</h2>
                 </div>
@@ -174,7 +225,7 @@
 
                 <ul class="text-white flex flex-col gap-2">
                     <li class="hover:text-blue-400 transition-colors duration-100 cursor-pointer">
-                        <a href="index.html">Inicio</a>
+                        <a href="/index.html">Inicio</a>
                     </li>
                     <li class="hover:text-blue-400 transition-colors duration-100 cursor-pointer">
                         <a href="inscripcion.html">Requisitos de inscripción</a>
@@ -237,7 +288,7 @@
                 <!--div para el mapa-->
                 <div>
                     <a href="https://maps.app.goo.gl/dDcDvWuBFTFnv7G67" target="_blank" rel="noopener noreferrer">
-                        <img src="public/mapa.jpg" alt="Ilustración de un mapa que reenvía al usuario a Google Maps"
+                        <img src="/assets/mapa.jpg" alt="Ilustración de un mapa que reenvía al usuario a Google Maps"
                             class="rounded-2xl max-h-75 w-auto object-cover hover:scale-105 transition-transform duration-200">
                     </a>
                 </div>
